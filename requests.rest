@@ -10,6 +10,10 @@ Content-Type: application/json
 
 ###
 
+GET http://localhost:3003/user/Fernando
+
+###
+
 GET http://localhost:3003/turmas
 
 ###
