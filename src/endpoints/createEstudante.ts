@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { connection } from "../index";
+import insertEstudante from "../data/insertEstudante";
 import { Student } from "../types";
 
 export default async function createEstudante(
@@ -28,7 +28,7 @@ export default async function createEstudante(
 			turma_id,
 		};
 
-		await connection("estudante_labesystem").insert(newStudent);
+		insertEstudante(newStudent);
 		res.status(201).send(`Estudante ${nome} cadastrado com sucesso!`);
 	} catch (error: any) {
 		if (typeof error === "string") {
