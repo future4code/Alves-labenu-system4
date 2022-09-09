@@ -10,13 +10,17 @@ Content-Type: application/json
 
 ###
 
+GET http://localhost:3003/turmas
+
+###
 
 POST http://localhost:3003/turma
 Content-Type: application/json
+
 {
   "nome": "Full-stack",
   "modulo": "05"
-  }
+}
   
 ###
 

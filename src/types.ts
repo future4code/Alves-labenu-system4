@@ -21,4 +21,8 @@ export type Docente = {
 	turma_id: string;
 };
 
-
+export type TurmaInser = {
+    id: string;
+    nome: string;
+    modulo: string;
+}

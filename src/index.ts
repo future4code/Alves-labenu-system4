@@ -7,6 +7,7 @@ import { AddressInfo } from "net";
 import createEstudante from "./endpoints/createEstudante";
 import createTurma from "./endpoints/createTurma";
 import createDocente from "./endpoints/createDocente";
+import getTurmas from "./endpoints/getTurmas";
 
 
 dotenv.config();
@@ -27,10 +28,9 @@ app.use(express.json());
 app.use(cors());
 
 app.post("/user",  createEstudante)
-
-
 app.post("/turma", createTurma)
 app.post("/criar-docente", createDocente)
+app.get("/turmas", getTurmas)
 
 
 
