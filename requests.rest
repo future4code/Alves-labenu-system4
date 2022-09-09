@@ -7,3 +7,15 @@ Content-Type: application/json
   "data_nasc": "22/02/1995",
   "turma_id": "001"
 }
+
+###
+
+POST http://localhost:3003/criar-docente
+Content-Type: application/json
+
+{
+  "nome": "Benjamin",
+  "email": "benjamin@gmail.com",
+  "data_nasc": "14/09/1992",
+  "turma_id": "002"
+}
