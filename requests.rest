@@ -7,3 +7,12 @@ Content-Type: application/json
   "data_nasc": "22/02/1995",
   "turma_id": "001"
 }
+
+###
+
+POST http://localhost:3003/turma
+Content-Type: application/json
+{
+  "nome": "Full-stack",
+  "modulo": "05"
+}

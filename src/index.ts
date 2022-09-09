@@ -5,6 +5,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import { AddressInfo } from "net";
 import createEstudante from "./endpoints/createEstudante";
+import createTurma from "./endpoints/createTurma";
 
 dotenv.config();
 
@@ -24,6 +25,8 @@ app.use(express.json());
 app.use(cors());
 
 app.post("/user",  createEstudante)
+
+app.post("/turma", createTurma)
 
 
 const server = app.listen(process.env.PORT || 3003, () => {
