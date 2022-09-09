@@ -5,7 +5,9 @@ import cors from "cors";
 import dotenv from "dotenv";
 import { AddressInfo } from "net";
 import createEstudante from "./endpoints/createEstudante";
+import createTurma from "./endpoints/createTurma";
 import createDocente from "./endpoints/createDocente";
+
 
 dotenv.config();
 
@@ -26,7 +28,10 @@ app.use(cors());
 
 app.post("/user",  createEstudante)
 
+
+app.post("/turma", createTurma)
 app.post("/criar-docente", createDocente)
+
 
 
 const server = app.listen(process.env.PORT || 3003, () => {

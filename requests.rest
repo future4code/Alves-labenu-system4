@@ -10,6 +10,16 @@ Content-Type: application/json
 
 ###
 
+
+POST http://localhost:3003/turma
+Content-Type: application/json
+{
+  "nome": "Full-stack",
+  "modulo": "05"
+  }
+  
+###
+
 POST http://localhost:3003/criar-docente
 Content-Type: application/json
 
@@ -18,4 +28,5 @@ Content-Type: application/json
   "email": "benjamin@gmail.com",
   "data_nasc": "14/09/1992",
   "turma_id": "002"
+
 }
