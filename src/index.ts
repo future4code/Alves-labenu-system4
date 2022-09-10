@@ -8,6 +8,7 @@ import createTurma from "./endpoints/createTurma";
 import createDocente from "./endpoints/createDocente";
 import getTurmas from "./endpoints/getTurmas";
 import getEstudantes from "./endpoints/getEstudantes";
+import changeEstudanteTurma from "./endpoints/changeEstudanteTurma";
 
 dotenv.config();
 
@@ -28,6 +29,7 @@ app.use(cors());
 
 app.get("/user/:nome", getEstudantes);
 app.post("/user", createEstudante);
+app.post("/user/mudar-turma", changeEstudanteTurma);
 app.post("/turma", createTurma);
 app.post("/criar-docente", createDocente);
 app.get("/turmas", getTurmas);
