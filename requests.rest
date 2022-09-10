@@ -1,3 +1,4 @@
+### Cadastrar estudante
 POST http://localhost:3003/user
 Content-Type: application/json
 
@@ -8,9 +9,18 @@ Content-Type: application/json
   "turma_id": "001"
 }
 
-###
+### Buscar estudante por nome
 
 GET http://localhost:3003/user/Fernando
+
+### Mudar estudante de turma
+POST http://localhost:3003/user/mudar-turma
+Content-Type: application/json
+
+{
+  "idEstudante": "1662735848809",
+  "turma": "002"
+}
 
 ###
 

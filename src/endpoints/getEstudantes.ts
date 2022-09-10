@@ -7,7 +7,7 @@ export default async function getEstudantes(
 ) {
 	try {
 		const nome = req.params.nome;
-		const result = await selectEstudantes(nome);
+		const result = await selectEstudantes(nome, "");
 
 		res.status(201).send(result);
 	} catch (error: any) {
