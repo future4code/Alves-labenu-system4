@@ -42,9 +42,9 @@ POST http://localhost:3003/criar-docente
 Content-Type: application/json
 
 {
-  "nome": "Benjamin",
-  "email": "benjamin@gmail.com",
-  "data_nasc": "14/09/1992",
+  "nome": "Giovana",
+  "email": "giovana@gmail.com",
+  "data_nasc": "14/08/1995",
   "turma_id": "002"
 
 }
@@ -55,10 +55,10 @@ GET http://localhost:3003/buscar-docentes
 
 ###
 
-POST http://localhost:3003/mudar-docentes
+POST http://localhost:3003/mudar-docente
 Content-Type: application/json
 
 {
-  "idDocente":"1662861630056",
+  "idDocente":"002",
   "turma":"001"
 }

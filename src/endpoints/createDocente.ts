@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 import insertDocente from "../data/insertDocente";
 import { Docente } from "../types";
+import moment from "moment"
 
 export default async function createDocente(req:Request, res:Response) {
     try {
@@ -10,11 +11,13 @@ export default async function createDocente(req:Request, res:Response) {
             throw new Error("Falta preencher algum campo")
         }
 
+        const dataNascimento = moment(data_nasc,"YYYY-MM-DD").format("DD/MM/YYYY")
+
         const novoDocente:Docente = {
             id: Date.now().toString(),
             nome,
             email, 
-            data_nasc,
+            data_nasc:dataNascimento,
             turma_id
         }
 
