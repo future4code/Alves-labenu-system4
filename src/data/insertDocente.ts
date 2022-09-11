@@ -14,3 +14,4 @@ export default async function insertDocente (docente: Docente):Promise<void> {
         turma_id
     })
 }
+

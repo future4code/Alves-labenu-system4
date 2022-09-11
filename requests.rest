@@ -48,3 +48,17 @@ Content-Type: application/json
   "turma_id": "002"
 
 }
+
+###
+
+GET http://localhost:3003/buscar-docentes
+
+###
+
+POST http://localhost:3003/mudar-docentes
+Content-Type: application/json
+
+{
+  "idDocente":"1662861630056",
+  "turma":"001"
+}
