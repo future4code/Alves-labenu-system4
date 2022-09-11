@@ -1,6 +1,5 @@
 import { Request, Response } from "express";
 import insertDocente from "../data/insertDocente";
-import insertDocent from "../data/insertDocente";
 import { Docente } from "../types";
 
 export default async function createDocente(req:Request, res:Response) {

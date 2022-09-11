@@ -9,6 +9,8 @@ import createDocente from "./endpoints/createDocente";
 import getTurmas from "./endpoints/getTurmas";
 import getEstudantes from "./endpoints/getEstudantes";
 import changeEstudanteTurma from "./endpoints/changeEstudanteTurma";
+import getDocentes from "./endpoints/getDocentes";
+import changeDocenteTurma from "./endpoints/changeDocenteTurma";
 
 dotenv.config();
 
@@ -33,6 +35,8 @@ app.post("/user/mudar-turma", changeEstudanteTurma);
 app.post("/turma", createTurma);
 app.post("/criar-docente", createDocente);
 app.get("/turmas", getTurmas);
+app.get("/buscar-docentes", getDocentes);
+app.post("/mudar-docente", changeDocenteTurma);
 
 const server = app.listen(process.env.PORT || 3003, () => {
 	if (server) {
