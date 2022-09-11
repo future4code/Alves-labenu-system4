@@ -26,19 +26,19 @@ export async function selectDocentes():Promise<Docente[] | undefined> {
     }
 }
 
-export default async function buscaDocente(id:string):Promise<Docente[] | undefined> {
-    const result = await connection("docente_labesystem")
+export default async function buscaDocente(id:string):Promise<Docente | undefined> {
+    const [result] = await connection("docente_labesystem")
         .where({ id})
     if(result) {
         const tipagemDocente = typeDocente(result)
-        return tipagemDocente()
+        return tipagemDocente
     } else {
         return undefined
     }
 }
 
-export async function updateDocente(idDocente:string, idTurma:string) {
+export async function updateDocente(idDocente:string, turma:string) {
     await connection("docente_labesystem")
         .where("id", `${idDocente}`)
-        .update({turma_id: idTurma})
+        .update({turma_id: turma})
 }
